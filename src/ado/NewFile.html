@@ -2,61 +2,24 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>Insert title here</title>
+<title>test</title>
 <script type="text/javascript">
-	var optoions = {
-		'formId' : 'form_bzVoice',
-		'tableName' : 'BZ_VOICE',
-		'tableTitle' : '语音数据',
-		'tableObjectName' : 'bzVoice',
-		'childs' : [ {
-			'tableTitle' : '对话语句',
-			'tableObjectName' : 'psTalkContent',
-			'fieldVarName' : 'voiceCode',
-			'fieldClassName' : 'VoiceCode'
-		}, {
-			'tableTitle' : '任务表',
-			'tableObjectName' : 'psTask',
-			'fieldVarName' : 'voiceCode',
-			'fieldClassName' : 'VoiceCode'
-		}, {
-			'tableTitle' : '语音匹配模型结果',
-			'tableObjectName' : 'rsVoiceMatchModel',
-			'fieldVarName' : 'voiceCode',
-			'fieldClassName' : 'VoiceCode'
-		} ]
-	};
+function Todate(num) { //Fri Oct 31 18:00:00 UTC+0800 2008
+	 num = num + "";
+	 var date = "";
+	 var month = new Array();
+	 month["Jan"] = 01; month["Feb"] = 02; month["Mar"] = 03; month["Apr"] = 04; month["May"] = 05; month["Jun"] = 06;
+	 month["Jul"] = 07; month["Aug"] = 08; month["Sep"] = 09; month["Oct"] = 10; month["Nov"] = 11; month["Dec"] = 12;
+	 var week = new Array();
+	 week["Mon"] = "一"; week["Tue"] = "二"; week["Wed"] = "三"; week["Thu"] = "四"; week["Fri"] = "五"; week["Sat"] = "六"; week["Sun"] = "日";
+	 str = num.split(" ");
+	 date = str[5] + "-";
+	 date = date + month[str[1]] + "-" + str[2];//获取到的年月日，要是想加上时分秒，就date = date + month[str[1]] + "-" + str[2]+ " " + str[3];
+	 return date;
+}
 </script>
 </head>
 <body>
-	<div class="row">
-		<div class="col-sm-5">
-			<div class="dataTables_info" id="example2_info" role="status"
-				aria-live="polite">
-				<span id='totalRowNum_psTalkContent'>总计行显示1到10行</span> 每页<select
-					onchange='goPage(-11,this);' id='pageSize' name='pageSize'><option
-						value=1>1</option>
-					<option value=5>5</option>
-
-					<option selected value=10>10</option>
-					<option value=20>20</option>
-					<option value=50>50</option>
-					<option value=100>100</option>
-					<option value=1000>1000</option></select>行
-			</div>
-		</div>
-		<div class="col-sm-7">
-			<div class="dataTables_paginate paging_simple_numbers"
-				id="example2_paginate">
-				<ul id='pagination_psTalkContent' class="pagination">
-					<li class="paginate_button active"><a href="#"
-						aria-controls="example2" data-dt-idx="1" tabindex="0">1</a></li>
-				</ul>
-			</div>
-			var
-			optoions={'formId':'form_bzVoice','tableName':'BZ_VOICE','tableTitle':'语音数据','tableObjectName':'bzVoice','childs':[{'tableTitle':'对话语句','tableObjectName':'psTalkContent','fieldVarName':'voiceCode','fieldClassName':'VoiceCode'},{'tableTitle':'任务表','tableObjectName':'psTask','fieldVarName':'voiceCode','fieldClassName':'VoiceCode'},{'tableTitle':'语音匹配模型结果','tableObjectName':'rsVoiceMatchModel','fieldVarName':'voiceCode','fieldClassName':'VoiceCode'}]};
-		</div>
-	</div>
-	</div>
+Todate("Tue Mar 13 00:00:00 CST 2018")
 </body>
 </html>
